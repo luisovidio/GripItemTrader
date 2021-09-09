@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GripItemTrader.Api", "GripItemTrader\GripItemTrader.Api.csproj", "{BB9FF5B1-472E-45FF-9B3F-D310D6128364}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GripItemTrader.Core", "GripItemTrader.Core\GripItemTrader.Core.csproj", "{D0080068-A2C6-422B-BBD4-709F69C84A1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GripItemTrader.UseCases", "GripItemTrader.UseCases\GripItemTrader.UseCases.csproj", "{918D85B2-1132-4F70-A995-376BAA0F6ED7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GripItemTrader.UnitTests", "GripItemTrader.UnitTests\GripItemTrader.UnitTests.csproj", "{B61569C1-ACA2-42DF-8AEB-62FB1ADB3600}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GripItemTrader.Gateways", "GripItemTrader.Gateways\GripItemTrader.Gateways.csproj", "{EF4B321E-503E-4C72-BE6B-E0930D15981A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB9FF5B1-472E-45FF-9B3F-D310D6128364}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB9FF5B1-472E-45FF-9B3F-D310D6128364}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB9FF5B1-472E-45FF-9B3F-D310D6128364}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB9FF5B1-472E-45FF-9B3F-D310D6128364}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0080068-A2C6-422B-BBD4-709F69C84A1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0080068-A2C6-422B-BBD4-709F69C84A1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0080068-A2C6-422B-BBD4-709F69C84A1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0080068-A2C6-422B-BBD4-709F69C84A1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{918D85B2-1132-4F70-A995-376BAA0F6ED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{918D85B2-1132-4F70-A995-376BAA0F6ED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{918D85B2-1132-4F70-A995-376BAA0F6ED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{918D85B2-1132-4F70-A995-376BAA0F6ED7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B61569C1-ACA2-42DF-8AEB-62FB1ADB3600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B61569C1-ACA2-42DF-8AEB-62FB1ADB3600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B61569C1-ACA2-42DF-8AEB-62FB1ADB3600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B61569C1-ACA2-42DF-8AEB-62FB1ADB3600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF4B321E-503E-4C72-BE6B-E0930D15981A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF4B321E-503E-4C72-BE6B-E0930D15981A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF4B321E-503E-4C72-BE6B-E0930D15981A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF4B321E-503E-4C72-BE6B-E0930D15981A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {04AF9017-734C-4274-8703-53ADF6017453}
+	EndGlobalSection
+EndGlobal
