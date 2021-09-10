@@ -45,7 +45,8 @@ namespace GripItemTrader.UnitTests.UseCases
              ITEM_A = new ()
              {
                  Id = ITEM_ID,
-                 PersonId = PERSON_A_ID
+                 PersonId = PERSON_A_ID,
+                 IsActive = true
              };
 
             _itemTransferRepositoryMock = new Mock<IItemTransferRepository>();
