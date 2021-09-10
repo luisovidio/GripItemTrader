@@ -11,7 +11,5 @@ namespace GripItemTrader.Core.Entities
         public string Name { get; set; }
         public bool IsActive { get; set; }
         public int PersonId { get; set; }
-
-        public Person Person { get; set; }
     }
 }

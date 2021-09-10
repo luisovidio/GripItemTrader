@@ -11,9 +11,5 @@ namespace GripItemTrader.Core.Entities
         public int FromPersonId { get; set; }
         public int ToPersonId { get; set; }
         public int ItemId { get; set; }
-
-        public Person FromPerson { get; set; }
-        public Person ToPerson { get; set; }
-        public Item Item { get; set; }
     }
 }
