@@ -21,5 +21,13 @@ namespace GripItemTrader.Gateways.Database
 
             return await query.AllAsync(p => p.Name != person.Name);
         }
+
+        public override async Task<Person> GetByIdAsync(int id)
+        {
+            return await _context.Person
+                .Include(p => p.Items)
+                .Where(p => p.Id == id)
+                .SingleOrDefaultAsync();
+        }
     }
 }

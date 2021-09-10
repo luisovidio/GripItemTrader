@@ -57,7 +57,7 @@ namespace GripItemTrader.UseCases
         private async Task<Item> EnsureItemExists(int itemId)
         {
             var item = await _itemTransferRepository.GetItemByIdAsync(itemId);
-            if (item != null)
+            if (item != null && item.IsActive)
                 return item;
 
             throw new GripItemTraderException(GripItemTraderError.ITEM_NOT_FOUND);

@@ -6,6 +6,7 @@ using GripItemTrader.Core.Interfaces.Repositories;
 using GripItemTrader.Core.Interfaces.UseCases;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace GripItemTrader.UseCases
@@ -24,6 +25,7 @@ namespace GripItemTrader.UseCases
             var person = await EnsureExists(personId);
 
             person.IsActive = false;
+            InactivateItems(person);
 
             await _personRepository.SaveChangesAsync();
         }
@@ -95,6 +97,13 @@ namespace GripItemTrader.UseCases
                 Name = personName.Trim(),
                 IsActive = true
             };
+        }
+
+        private static void InactivateItems(Person person)
+        {
+            if (person.Items != null && person.Items.Any())
+                foreach (var item in person.Items)
+                    item.IsActive = false;
         }
     }
 }

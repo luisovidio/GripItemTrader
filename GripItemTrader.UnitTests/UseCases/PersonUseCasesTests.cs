@@ -83,6 +83,35 @@ namespace GripItemTrader.UnitTests.UseCases
         }
 
         [Test]
+        public async Task ShouldSoftDeletePersonAndItemsAsync()
+        {
+            // Arrange
+            var items = new List<Item>
+            {
+                new Item { IsActive = true },
+                new Item { IsActive = true },
+                new Item { IsActive = true },
+            };
+            var personToBeDeleted = new Person 
+            { 
+                IsActive = true,
+                Items = items
+            };
+            int anyId = It.IsAny<int>();
+            _personRepositoryMock
+                .Setup(r => r.GetByIdAsync(anyId))
+                .ReturnsAsync(personToBeDeleted);
+
+            // Act
+            await _personUseCases.DeletePersonAsync(anyId);
+
+            // Assert
+            Assert.IsFalse(personToBeDeleted.IsActive);
+            Assert.IsTrue(items.All(i => !i.IsActive));
+            _personRepositoryMock.Verify(r => r.SaveChangesAsync(), Times.Once);
+        }
+
+        [Test]
         public void ShouldNotDeletePersonWithInvalidId()
         {
             // Arrange

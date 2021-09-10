@@ -20,7 +20,7 @@ namespace GripItemTrader.Gateways.Database
 
         public async Task<bool> IsPersonIdValidAsync(int personId)
         {
-            return await _context.Person.AnyAsync(p => p.Id == personId);
+            return await _context.Person.AnyAsync(p => p.IsActive && p.Id == personId);
         }
     }
 }
